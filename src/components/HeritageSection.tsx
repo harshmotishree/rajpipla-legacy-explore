@@ -92,14 +92,14 @@ export const HeritageSection = () => {
             <div className="space-y-4">
               <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64">
                 <img 
-                  src="https://images.unsplash.com/photo-1609188944035-ae2b8828f4a0?q=80&w=2670" 
+                  src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=3648" 
                   alt="Palace architecture detail" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96">
                 <img 
-                  src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2670" 
+                  src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=3654" 
                   alt="Palace interior" 
                   className="w-full h-full object-cover"
                 />
@@ -108,14 +108,14 @@ export const HeritageSection = () => {
             <div className="space-y-4 mt-8">
               <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96">
                 <img 
-                  src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?q=80&w=2574" 
+                  src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=3648" 
                   alt="Palace corridor" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64">
                 <img 
-                  src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2670" 
+                  src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=3506" 
                   alt="Palace artwork" 
                   className="w-full h-full object-cover"
                 />
