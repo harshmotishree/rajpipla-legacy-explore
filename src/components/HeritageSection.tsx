@@ -92,14 +92,14 @@ export const HeritageSection = () => {
             <div className="space-y-4">
               <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64">
                 <img 
-                  src="https://images.unsplash.com/photo-1609188944035-ae2b8828f4a0?q=80&w=2670" 
+                  src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-63f72b3caf7b11edbd950a58a9feac02.jpg" 
                   alt="Palace architecture detail" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96">
                 <img 
-                  src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2670" 
+                  src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-e07cf1c249fa11e9b0760242ac110004.jpg" 
                   alt="Palace interior" 
                   className="w-full h-full object-cover"
                 />
@@ -108,14 +108,14 @@ export const HeritageSection = () => {
             <div className="space-y-4 mt-8">
               <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96">
                 <img 
-                  src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?q=80&w=2574" 
+                  src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-0216c704-ed02-469a-ba61-1f5f39519bfb.jpg" 
                   alt="Palace corridor" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64">
                 <img 
-                  src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2670" 
+                  src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-251b856caf7a11edb62d0a58a9feac02.jpg" 
                   alt="Palace artwork" 
                   className="w-full h-full object-cover"
                 />

@@ -37,7 +37,7 @@ export const Hero = () => {
           ref={heroRef}
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=2670')`,
+            backgroundImage: `url('https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-56acba50-5092-4a37-a4ce-68c5422db30d.jpg')`,
             backgroundPosition: 'center 30%',
             filter: 'brightness(0.7)'
           }}

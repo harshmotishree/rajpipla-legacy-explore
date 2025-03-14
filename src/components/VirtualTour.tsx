@@ -27,7 +27,7 @@ export const VirtualTour = () => {
           <h6 className="text-heritage-burgundy font-medium mb-3 uppercase tracking-wider text-sm fade-in-scroll">Immersive Experience</h6>
           <h2 className="text-heritage-navy font-serif mb-4 fade-in-scroll">Explore Every Corner of the Palace</h2>
           <p className="text-heritage-charcoal/80 fade-in-scroll">
-            Take a virtual journey through the hallways, chambers, and gardens of Rajpipla Palace from the comfort of your home
+            Take a virtual journey through the hallways, chambers, and gardens of Rajvant Palace from the comfort of your home
           </p>
         </div>
         
@@ -36,8 +36,8 @@ export const VirtualTour = () => {
           <div className="rounded-lg overflow-hidden shadow-xl fade-in-scroll">
             <div className="relative pb-[75%] bg-heritage-navy/10">
               <img 
-                src="https://images.unsplash.com/photo-1595877244574-e90ce41ce089?q=80&w=2574" 
-                alt="Virtual tour of Rajpipla Palace" 
+                src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-e453b951-0348-458c-b3cc-962f759375d5.jpg" 
+                alt="Virtual tour of Rajvant Palace" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center">
