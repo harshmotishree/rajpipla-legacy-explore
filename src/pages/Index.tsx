@@ -13,7 +13,7 @@ const Index = () => {
     window.scrollTo(0, 0);
     
     // Set page title
-    document.title = "Nilambaug Palace - Royal Heritage Experience";
+    document.title = "Rajpipla Palace - Royal Heritage Experience";
   }, []);
 
   return (
