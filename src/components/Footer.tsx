@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* About */}
           <div>
-            <h3 className="font-serif text-2xl mb-4 text-heritage-gold">Rajpipla Palace</h3>
+            <h3 className="font-serif text-2xl mb-4 text-heritage-gold">Rajvant Palace Resort</h3>
             <p className="text-white/70 mb-6">
               A cultural treasure preserving the legacy and splendor of India's royal heritage.
             </p>
@@ -23,7 +23,7 @@ export const Footer = () => {
               <a href="#" className="text-white/70 hover:text-heritage-gold transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="mailto:info@rajpipla-palace.com" className="text-white/70 hover:text-heritage-gold transition-colors">
+              <a href="mailto:rajpipla@rajvantpalace.com" className="text-white/70 hover:text-heritage-gold transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -33,7 +33,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-medium text-lg mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
-              {["History", "Virtual Tour", "Book a Visit", "Heritage", "Gallery", "FAQ"].map((item, index) => (
+              {["History", "Virtual Tour", "Book a Visit", "Facilities", "Gallery", "FAQ"].map((item, index) => (
                 <li key={index}>
                   <Link to={`/${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-white/70 hover:text-heritage-gold transition-colors">
                     {item}
@@ -45,50 +45,44 @@ export const Footer = () => {
           
           {/* Visit */}
           <div>
-            <h4 className="font-medium text-lg mb-4 text-white">Visiting Information</h4>
+            <h4 className="font-medium text-lg mb-4 text-white">Contact Details</h4>
             <ul className="space-y-4">
               <li className="text-white/70">
-                <span className="block text-white">Opening Hours</span>
-                Monday - Sunday: 9:00 AM - 5:00 PM
-              </li>
-              <li className="text-white/70">
-                <span className="block text-white">Location</span>
-                Rajpipla Palace, Narmada District<br />
-                Gujarat, India - 393145
+                <span className="block text-white">Address</span>
+                Rajvant Palace Resort, <br />
+                Vijay Palace, <br />
+                Rajpipla - 393 145, <br />
+                Dist. Narmada (Gujarat)
               </li>
               <li className="text-white/70">
                 <span className="block text-white">Contact</span>
-                +91 98765 43210<br />
-                info@rajpipla-palace.com
+                Phone: (02640) 220345, 220973<br />
+                Fax: (02640) 220071<br />
+                Email: rajpipla@rajvantpalace.com
               </li>
             </ul>
           </div>
           
-          {/* Newsletter */}
+          {/* Facilities */}
           <div>
-            <h4 className="font-medium text-lg mb-4 text-white">Newsletter</h4>
-            <p className="text-white/70 mb-4">
-              Subscribe to our newsletter for updates on events, exhibitions, and special tours.
-            </p>
-            <form className="space-y-3">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-md focus:outline-none focus:ring-2 focus:ring-heritage-gold/50 focus:border-heritage-gold/50 placeholder-white/40 text-white"
-              />
-              <button 
-                type="submit"
-                className="w-full bg-heritage-gold hover:bg-heritage-gold/90 text-heritage-navy font-medium py-2 px-4 rounded-md transition-all duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
+            <h4 className="font-medium text-lg mb-4 text-white">Resort Facilities</h4>
+            <ul className="space-y-2 text-white/70">
+              <li>24 hrs. hot & cold water</li>
+              <li>24 hrs. Room Service</li>
+              <li>Swimming Pool</li>
+              <li>Indoor & Outdoor Games</li>
+              <li>Laundry service</li>
+              <li>Car Rentals</li>
+              <li>Safe Parking</li>
+              <li>BOB/Master/Visa Credit Cards accepted</li>
+              <li className="text-heritage-gold pt-2">Check Out time: 10:00 a.m.</li>
+            </ul>
           </div>
         </div>
         
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Rajpipla Palace. All rights reserved.
+            &copy; {new Date().getFullYear()} Rajvant Palace Resort. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy-policy" className="text-white/60 hover:text-white text-sm transition-colors">
@@ -97,9 +91,9 @@ export const Footer = () => {
             <Link to="/terms-of-service" className="text-white/60 hover:text-white text-sm transition-colors">
               Terms of Service
             </Link>
-            <Link to="/sitemap" className="text-white/60 hover:text-white text-sm transition-colors">
-              Sitemap
-            </Link>
+            <p className="text-white/60 text-sm">
+              All Taxes Extra as Applicable. Tariff Subject to Change without prior notice.
+            </p>
           </div>
         </div>
       </div>

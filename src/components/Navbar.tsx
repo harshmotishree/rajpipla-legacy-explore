@@ -36,12 +36,12 @@ export const Navbar = () => {
             "font-serif text-2xl md:text-3xl font-bold text-heritage-navy transition-all duration-300",
             isScrolled ? "text-heritage-navy" : "text-white"
           )}>
-            Rajpipla Palace
+            Rajvant Palace
           </h1>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          {["History", "Tour", "Heritage", "Contact"].map((item) => (
+          {["History", "Tour", "Facilities", "Contact"].map((item) => (
             <Link 
               key={item} 
               to={`/${item.toLowerCase()}`}
@@ -78,7 +78,7 @@ export const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md shadow-lg">
           <div className="container mx-auto px-6 py-4 space-y-2">
-            {["History", "Tour", "Heritage", "Contact"].map((item) => (
+            {["History", "Tour", "Facilities", "Contact"].map((item) => (
               <Link 
                 key={item} 
                 to={`/${item.toLowerCase()}`}

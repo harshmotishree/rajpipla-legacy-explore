@@ -48,11 +48,11 @@ export const Hero = () => {
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
         <div className="animate-fade-in max-w-5xl">
           <h1 className="text-white font-serif mb-4 font-bold leading-tight">
-            Experience the Royal Legacy <br />of Rajpipla Palace
+            Experience the Royal Legacy <br />of Rajvant Palace Resort
           </h1>
           <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Step into a world of regal splendor and timeless elegance as you explore
-            the historical marvel that has stood for centuries
+            Step into a world of regal splendor and timeless elegance in this European-inspired 
+            mansion built for Maharajah Vijay Singhji in 1915
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">

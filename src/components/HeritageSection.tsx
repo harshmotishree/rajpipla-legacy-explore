@@ -21,7 +21,7 @@ export const HeritageSection = () => {
           <h6 className="text-heritage-burgundy font-medium mb-3 uppercase tracking-wider text-sm fade-in-scroll">Our Legacy</h6>
           <h2 className="text-heritage-navy font-serif mb-4 fade-in-scroll">Discover the Royal Heritage</h2>
           <p className="text-heritage-charcoal/80 fade-in-scroll">
-            Delve into the rich history and cultural significance of the palace and its inhabitants through the centuries
+            The Rajvant Palace Resort is part of the 7-acre Vijayraj palace complex, showcasing a blend of European architectural styles
           </p>
         </div>
         
@@ -30,26 +30,26 @@ export const HeritageSection = () => {
             {
               icon: Clock,
               title: "Historical Timeline",
-              description: "Explore the chronological journey of Rajpipla Palace from its inception to present day",
+              description: "Built for Maharajah Vijay Singhji in 1915, the palace has a rich historical legacy",
               link: "/history"
             },
             {
               icon: Crown,
-              title: "Royal Lineage",
-              description: "Learn about the royal families and rulers who have called this palace home",
-              link: "/lineage"
+              title: "Royal Museum",
+              description: "Explore rooms dedicated to trophies, stuffed animals, mirrors, portraits, textiles, and more",
+              link: "/museum"
             },
             {
               icon: FileText,
               title: "Architecture",
-              description: "Discover the unique architectural features and influences that shaped the palace",
+              description: "Admire the Romanesque dome, classical columns, Greek capitals, Venetian doors, and Gothic arches",
               link: "/architecture"
             },
             {
               icon: Book,
-              title: "Cultural Significance",
-              description: "Understand the palace's importance in regional art, culture, and traditions",
-              link: "/culture"
+              title: "Facilities",
+              description: "Enjoy 24-hour service, swimming pool, indoor & outdoor games, and luxury amenities",
+              link: "/facilities"
             }
           ].map((item, index) => (
             <div 
@@ -73,12 +73,12 @@ export const HeritageSection = () => {
         
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 space-y-6 fade-in-scroll">
-            <h3 className="text-heritage-navy font-serif">A Marvel of Royal Architecture</h3>
+            <h3 className="text-heritage-navy font-serif">A Marvel of European Architecture</h3>
             <p className="text-heritage-charcoal/80">
-              The palace showcases a unique blend of architectural styles, combining European neo-classical influences with traditional Indian design elements. Its majestic façade, intricate carvings, and sprawling grounds stand as a testament to the artistic excellence of the era.
+              The palace resembles a typical European mansion, with its Romanesque dome, classical columns, Greek capitals, and Venetian doors, Gothic arches. The interiors are appointed in original period furniture.
             </p>
             <p className="text-heritage-charcoal/80">
-              Each room tells a story of opulence and craftsmanship, from the grand durbar hall adorned with chandeliers and ornate frescoes to the private chambers featuring delicate inlay work and period furniture.
+              A few rooms of the palace are set aside for a museum of trophies, stuffed animals, mirrors, portraits, textiles, glass and ceramics, offering visitors a glimpse into royal history.
             </p>
             <Link 
               to="/heritage" 
