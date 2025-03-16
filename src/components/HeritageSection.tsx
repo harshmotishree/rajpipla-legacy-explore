@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Clock, Book, FileText, Crown, ArrowRight } from "lucide-react";
+import { Clock, Book, FileText, Crown } from "lucide-react";
 import { setupScrollReveal } from "@/lib/animations";
 
 export const HeritageSection = () => {
