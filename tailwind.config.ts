@@ -76,7 +76,9 @@ export default {
 					emerald: '#046A38',
 					ivory: '#FFFFF0',
 					indigo: '#4B0082',
-				}
+				},
+        // Add cream as a direct color option so bg-cream works
+        cream: '#F8F5F0',
 			},
 			fontFamily: {
 				serif: ['Noto Serif', 'Playfair Display', 'Georgia', 'serif'],
