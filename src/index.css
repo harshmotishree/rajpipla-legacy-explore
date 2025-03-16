@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 39 30% 98%;
     --foreground: 35 10% 15%;
 
     --card: 0 0% 100%;
@@ -84,7 +84,7 @@
   }
 
   body {
-    @apply bg-white text-foreground font-sans;
+    @apply bg-background text-foreground font-sans bg-india-pattern;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -120,7 +120,7 @@
   }
 
   .glass-panel {
-    @apply bg-white/90 backdrop-blur-md border border-heritage-gold/20 shadow-lg;
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
   }
   
   .indian-border {
@@ -128,7 +128,7 @@
   }
   
   .royal-card {
-    @apply bg-white/95 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-heritage-gold/20 indian-border;
+    @apply bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-heritage-gold/20 indian-border;
   }
   
   .royal-button {
