@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -83,12 +84,12 @@
   }
 
   body {
-    @apply bg-white text-foreground font-sans;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    @apply bg-cream text-heritage-charcoal font-serif;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 5v1H5V0zm1 5v1H5v-1h1z'/%3E%3C/g%3E%3C/svg%3E");
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-medium tracking-tight text-heritage-navy;
+    @apply font-serif font-medium tracking-tight text-heritage-charcoal;
   }
 
   h1 {
@@ -116,46 +117,78 @@
   }
   
   .link-underline {
-    @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-heritage-gold after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100;
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-heritage-charcoal after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100;
   }
 
   .glass-panel {
-    @apply bg-white/95 backdrop-blur-md border border-heritage-gold/20 shadow-lg;
+    @apply bg-cream/80 backdrop-blur-sm border border-heritage-charcoal/10 shadow-sm;
   }
   
   .indian-border {
-    @apply relative before:absolute before:inset-0 before:p-[2px] before:rounded-md before:bg-gradient-to-r before:from-heritage-gold before:via-heritage-saffron before:to-heritage-gold before:-z-10;
+    @apply relative before:absolute before:inset-0 before:p-[1px] before:rounded-md before:bg-gradient-to-r before:from-heritage-burgundy before:via-heritage-saffron before:to-heritage-burgundy before:-z-10;
   }
   
   .royal-card {
-    @apply bg-white/95 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-heritage-gold;
+    @apply bg-cream rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border-t border-heritage-burgundy;
   }
   
   .royal-button {
-    @apply bg-gradient-to-r from-heritage-gold via-heritage-saffron/90 to-heritage-gold text-heritage-navy font-medium px-6 py-3 rounded-md transition-all duration-300 hover:shadow-md;
+    @apply bg-heritage-burgundy text-cream font-medium px-6 py-3 rounded-md transition-all duration-300 hover:bg-heritage-burgundy/90;
   }
 
   .indian-pattern {
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.08'%3E%3Cpath d='M20 0c11.046 0 20 8.954 20 20s-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0zm0 5C12.268 5 6 11.268 6 19s6.268 14 14 14 14-6.268 14-14S27.732 5 20 5zm0 5c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9zm0 5c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #f8f5f0;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23800020' fill-opacity='0.06'%3E%3Cpath d='M0 0h40v40H0V0zm20 20h20v20H20V20zM0 20h20v20H0V20z'/%3E%3C/g%3E%3C/svg%3E");
   }
 
   .mandala-pattern {
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23D4AF37' fill-opacity='0.07'%3E%3Ccircle cx='40' cy='40' r='38'/%3E%3Ccircle cx='40' cy='40' r='32'/%3E%3Ccircle cx='40' cy='40' r='26'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #f8f5f0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23800020' fill-opacity='0.07'%3E%3Cpath d='M40 0a39.96 39.96 0 0 0-24.95 8.71c5.9-4.95 12.7-8.23 19.96-8.7a39.97 39.97 0 0 0-14.97 3.7c7.85-3.53 16.68-4.19 25.93-1.5A39.96 39.96 0 0 0 25 10.02c7.98-5.8 17.89-7.6 27.51-4.39A39.98 39.98 0 0 0 33.99 15c6.32-5.34 14.19-7.33 22.02-5.93A39.94 39.94 0 0 0 40 10a39.95 39.95 0 0 0-6.03.46c4.88-.83 9.9-.41 14.53 1.25a40.15 40.15 0 0 0-11.75 3.11c6.23-3.04 13.25-3.46 19.25-1.25'/%3E%3C/g%3E%3C/svg%3E");
   }
 
-  .lotus-decoration {
-    position: relative;
+  .cream {
+    background-color: #f8f5f0;
   }
   
-  .lotus-decoration::before {
+  .heritage-burgundy {
+    color: #800020;
+  }
+  
+  .heritage-saffron {
+    color: #FF9933;
+  }
+  
+  .heritage-charcoal {
+    color: #36454F;
+  }
+  
+  .ornate-divider {
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+  
+  .ornate-divider::before {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a4 4 0 0 0-4 4c0 3 4 6 4 10a4 4 0 0 0-4-4c-3 0-6 4-10 4a4 4 0 0 0 4-4c0-3-4-6-4-10a4 4 0 0 0 4 4c3 0 6-4 10-4a4 4 0 0 0-4 4c0 3 4 6 4 10a4 4 0 0 0-4-4c-3 0-6 4-10 4a4 4 0 0 0 4-4c0-3-4-6-4-10'/%3E%3C/svg%3E");
-    opacity: 0.5;
-    z-index: 1;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    background-color: #800020;
+    opacity: 0.3;
+  }
+  
+  .ornate-divider::after {
+    content: '❧';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #800020;
+    background-color: #f8f5f0;
+    padding: 0 1rem;
   }
 }

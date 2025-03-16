@@ -11,25 +11,16 @@ export const HeritageSection = () => {
   }, []);
 
   return (
-    <section className="py-24 indian-pattern relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-0 w-64 h-64 bg-heritage-gold/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-0 w-64 h-64 bg-heritage-burgundy/5 rounded-full blur-3xl"></div>
+    <section className="py-24 cream relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 indian-pattern opacity-30"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-xl mx-auto text-center mb-16">
-          <div className="mb-6 flex justify-center">
-            <div className="h-px w-24 bg-heritage-gold mx-2"></div>
-            <svg width="40" height="40" viewBox="0 0 100 100" className="text-heritage-gold mx-2">
-              <g fill="currentColor">
-                <path d="M50,10 A40,40 0 1,0 50,90 A40,40 0 1,0 50,10 Z M50,30 A20,20 0 1,1 50,70 A20,20 0 1,1 50,30 Z" />
-              </g>
-            </svg>
-            <div className="h-px w-24 bg-heritage-gold mx-2"></div>
-          </div>
-          <h6 className="text-heritage-burgundy font-medium mb-3 uppercase tracking-wider text-sm fade-in-scroll">Our Legacy</h6>
-          <h2 className="text-heritage-navy font-serif mb-4 fade-in-scroll">Discover the Royal Heritage</h2>
-          <p className="text-heritage-charcoal/80 fade-in-scroll">
+          <div className="ornate-divider"></div>
+          <h6 className="text-heritage-burgundy font-medium mb-3 uppercase tracking-wide text-sm fade-in-scroll">Our Legacy</h6>
+          <h2 className="text-heritage-charcoal font-serif mb-4 fade-in-scroll">Discover the Royal Heritage</h2>
+          <p className="text-heritage-charcoal/80 fade-in-scroll font-serif">
             The Rajvant Palace showcases a blend of European architectural styles with distinctly Indian royal influences
           </p>
         </div>
@@ -65,14 +56,14 @@ export const HeritageSection = () => {
               key={index} 
               className="royal-card fade-in-scroll"
             >
-              <div className="mb-4 bg-gradient-to-r from-heritage-gold/10 to-heritage-saffron/10 inline-flex p-3 rounded-lg text-heritage-burgundy">
+              <div className="mb-4 bg-heritage-burgundy/10 inline-flex p-3 rounded-lg text-heritage-burgundy">
                 <item.icon className="h-6 w-6" />
               </div>
-              <h4 className="font-medium text-heritage-navy mb-2">{item.title}</h4>
-              <p className="text-heritage-charcoal/70 mb-4 text-sm">{item.description}</p>
+              <h4 className="font-medium text-heritage-charcoal mb-2">{item.title}</h4>
+              <p className="text-heritage-charcoal/70 mb-4 text-sm font-serif">{item.description}</p>
               <Link 
                 to={item.link} 
-                className="text-sm text-heritage-burgundy hover:text-heritage-gold transition-colors inline-flex items-center font-medium group"
+                className="text-sm text-heritage-burgundy hover:text-heritage-burgundy/70 transition-colors inline-flex items-center font-medium group"
               >
                 Explore more
                 <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
@@ -83,17 +74,17 @@ export const HeritageSection = () => {
         
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 space-y-6 glass-panel p-8 rounded-lg fade-in-scroll">
-            <div className="h-0.5 w-16 bg-heritage-gold mb-4"></div>
-            <h3 className="text-heritage-navy font-serif">A Treasure of Indian Royal Heritage</h3>
-            <p className="text-heritage-charcoal/80">
+            <div className="h-0.5 w-16 bg-heritage-burgundy mb-4"></div>
+            <h3 className="text-heritage-charcoal font-serif">A Treasure of Indian Royal Heritage</h3>
+            <p className="text-heritage-charcoal/80 font-serif">
               The palace showcases the perfect blend of traditional Indian royal architecture and European influences. The intricate details of the façade and interiors are testament to the craftsmanship of the era.
             </p>
-            <p className="text-heritage-charcoal/80">
+            <p className="text-heritage-charcoal/80 font-serif">
               Experience the royal lifestyle as the palace houses a museum of historical artifacts, including original furniture, artworks, and royal memorabilia that offer a glimpse into the opulent lifestyle of Indian royalty.
             </p>
             <Link 
               to="/heritage" 
-              className="inline-block mt-4 bg-gradient-to-r from-heritage-burgundy to-heritage-ruby hover:from-heritage-burgundy/90 hover:to-heritage-ruby/90 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 shadow-md"
+              className="inline-block mt-4 bg-heritage-burgundy hover:bg-heritage-burgundy/90 text-cream px-6 py-3 rounded-md font-medium transition-all duration-300"
             >
               Explore the Heritage
             </Link>
@@ -101,14 +92,14 @@ export const HeritageSection = () => {
           
           <div className="order-1 lg:order-2 grid grid-cols-2 gap-4 fade-in-scroll">
             <div className="space-y-4">
-              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64 indian-border p-0.5">
+              <div className="rounded-lg overflow-hidden shadow-sm h-48 md:h-64 indian-border p-0.5">
                 <img 
                   src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-63f72b3caf7b11edbd950a58a9feac02.jpg" 
                   alt="Palace architecture detail" 
                   className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96 indian-border p-0.5">
+              <div className="rounded-lg overflow-hidden shadow-sm h-48 md:h-96 indian-border p-0.5">
                 <img 
                   src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-e07cf1c249fa11e9b0760242ac110004.jpg" 
                   alt="Palace interior" 
@@ -117,14 +108,14 @@ export const HeritageSection = () => {
               </div>
             </div>
             <div className="space-y-4 mt-8">
-              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96 indian-border p-0.5">
+              <div className="rounded-lg overflow-hidden shadow-sm h-48 md:h-96 indian-border p-0.5">
                 <img 
                   src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-0216c704-ed02-469a-ba61-1f5f39519bfb.jpg" 
                   alt="Palace corridor" 
                   className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64 indian-border p-0.5">
+              <div className="rounded-lg overflow-hidden shadow-sm h-48 md:h-64 indian-border p-0.5">
                 <img 
                   src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-251b856caf7a11edb62d0a58a9feac02.jpg" 
                   alt="Palace artwork" 
