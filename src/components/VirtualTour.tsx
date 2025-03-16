@@ -16,14 +16,18 @@ export const VirtualTour = () => {
     <section ref={sectionRef} className="py-24 bg-heritage-cream/30 relative overflow-hidden">
       {/* Background pattern */}
       <div 
-        className="absolute inset-0 opacity-5 bg-repeat"
-        style={{ 
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
+        className="absolute inset-0 opacity-10 bg-paisley-pattern"
       />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-24 h-24 bg-heritage-gold/10 rotate-45 -translate-x-12 -translate-y-12"></div>
+      <div className="absolute bottom-0 right-0 w-32 h-32 bg-heritage-saffron/10 rotate-45 translate-x-16 translate-y-16"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-xl mx-auto text-center mb-16">
+          <div className="flex justify-center mb-4">
+            <div className="h-0.5 w-20 bg-heritage-gold"></div>
+          </div>
           <h6 className="text-heritage-burgundy font-medium mb-3 uppercase tracking-wider text-sm fade-in-scroll">Immersive Experience</h6>
           <h2 className="text-heritage-navy font-serif mb-4 fade-in-scroll">Explore Every Corner of the Palace</h2>
           <p className="text-heritage-charcoal/80 fade-in-scroll">
@@ -33,15 +37,15 @@ export const VirtualTour = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Tour Preview */}
-          <div className="rounded-lg overflow-hidden shadow-xl fade-in-scroll">
-            <div className="relative pb-[75%] bg-heritage-navy/10">
+          <div className="rounded-lg overflow-hidden shadow-xl fade-in-scroll indian-border p-1">
+            <div className="relative pb-[75%] bg-heritage-navy/10 overflow-hidden rounded-md">
               <img 
                 src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-e453b951-0348-458c-b3cc-962f759375d5.jpg" 
                 alt="Virtual tour of Rajvant Palace" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <Link to="/tour" className="bg-white/20 backdrop-blur-md hover:bg-white/40 text-white p-6 rounded-full transition-all duration-300 hover:scale-110">
+                <Link to="/tour" className="bg-heritage-gold/30 backdrop-blur-md hover:bg-heritage-gold/60 text-white p-6 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(212,175,55,0.6)]">
                   <Eye className="h-8 w-8" />
                 </Link>
               </div>
@@ -111,9 +115,9 @@ export const VirtualTour = () => {
             
             <Link 
               to="/tour" 
-              className="inline-flex items-center text-heritage-burgundy hover:text-heritage-gold transition-colors fade-in-scroll"
+              className="inline-flex items-center text-heritage-burgundy hover:text-heritage-gold transition-colors fade-in-scroll group"
             >
-              Start the virtual tour <ArrowRight className="ml-2 h-4 w-4" />
+              Start the virtual tour <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>

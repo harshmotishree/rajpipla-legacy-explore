@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,7 +62,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Heritage theme colors
 				heritage: {
 					gold: '#D4AF37',
 					burgundy: '#800020',
@@ -71,6 +69,12 @@ export default {
 					cream: '#F5F5DC',
 					stone: '#E8DCCA',
 					charcoal: '#36454F',
+					saffron: '#FF9933',
+					peacock: '#50727B',
+					ruby: '#E0115F',
+					emerald: '#046A38',
+					ivory: '#FFFFF0',
+					indigo: '#4B0082',
 				}
 			},
 			fontFamily: {
@@ -110,6 +114,11 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' },
+				},
+				'royal-shimmer': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
@@ -120,10 +129,13 @@ export default {
 				'fade-in-left': 'fade-in-left 0.8s ease-out',
 				'scale-in': 'scale-in 0.8s ease-out',
 				'float': 'float 6s ease-in-out infinite',
+				'royal-shimmer': 'royal-shimmer 3s ease infinite',
 			},
 			backgroundImage: {
 				'marble-texture': "url('https://images.unsplash.com/photo-1589217157232-464b505b197d?q=80&w=2574')",
 				'parchment-texture': "url('https://images.unsplash.com/photo-1581431886281-93ae50c7c229?q=80&w=2670')",
+				'india-pattern': "url(\"data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+				'paisley-pattern': "url(\"data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
 			}
 		}
 	},

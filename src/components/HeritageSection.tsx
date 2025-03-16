@@ -16,8 +16,18 @@ export const HeritageSection = () => {
       <div className="absolute -right-64 -top-64 w-[40rem] h-[40rem] rounded-full bg-heritage-gold/5 blur-3xl z-0"></div>
       <div className="absolute -left-64 -bottom-64 w-[40rem] h-[40rem] rounded-full bg-heritage-burgundy/5 blur-3xl z-0"></div>
       
+      {/* Indian pattern background */}
+      <div className="absolute inset-0 opacity-5 bg-india-pattern"></div>
+      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-xl mx-auto text-center mb-16">
+          <div className="mb-4 flex justify-center">
+            <div className="inline-block">
+              <svg width="80" height="20" viewBox="0 0 80 20" className="text-heritage-gold">
+                <path fill="currentColor" d="M0,10 L20,0 L40,10 L60,0 L80,10 L80,15 L60,5 L40,15 L20,5 L0,15 Z" />
+              </svg>
+            </div>
+          </div>
           <h6 className="text-heritage-burgundy font-medium mb-3 uppercase tracking-wider text-sm fade-in-scroll">Our Legacy</h6>
           <h2 className="text-heritage-navy font-serif mb-4 fade-in-scroll">Discover the Royal Heritage</h2>
           <p className="text-heritage-charcoal/80 fade-in-scroll">
@@ -54,18 +64,19 @@ export const HeritageSection = () => {
           ].map((item, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-heritage-cream fade-in-scroll"
+              className="royal-card fade-in-scroll"
             >
-              <div className="mb-4 bg-heritage-cream/50 inline-flex p-3 rounded-lg text-heritage-burgundy">
+              <div className="mb-4 bg-gradient-to-r from-heritage-gold/20 to-heritage-saffron/20 inline-flex p-3 rounded-lg text-heritage-burgundy">
                 <item.icon className="h-6 w-6" />
               </div>
               <h4 className="font-medium text-heritage-navy mb-2">{item.title}</h4>
               <p className="text-heritage-charcoal/70 mb-4 text-sm">{item.description}</p>
               <Link 
                 to={item.link} 
-                className="text-sm text-heritage-burgundy hover:text-heritage-gold transition-colors inline-flex items-center font-medium"
+                className="text-sm text-heritage-burgundy hover:text-heritage-gold transition-colors inline-flex items-center font-medium group"
               >
                 Explore more
+                <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           ))}
@@ -73,6 +84,7 @@ export const HeritageSection = () => {
         
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 space-y-6 fade-in-scroll">
+            <div className="h-0.5 w-16 bg-heritage-gold mb-4"></div>
             <h3 className="text-heritage-navy font-serif">A Marvel of European Architecture</h3>
             <p className="text-heritage-charcoal/80">
               The palace resembles a typical European mansion, with its Romanesque dome, classical columns, Greek capitals, and Venetian doors, Gothic arches. The interiors are appointed in original period furniture.
@@ -82,7 +94,7 @@ export const HeritageSection = () => {
             </p>
             <Link 
               to="/heritage" 
-              className="inline-block mt-4 bg-heritage-burgundy hover:bg-heritage-burgundy/90 text-white px-6 py-3 rounded-md font-medium transition-all duration-300"
+              className="inline-block mt-4 bg-gradient-to-r from-heritage-burgundy to-heritage-ruby hover:from-heritage-burgundy/90 hover:to-heritage-ruby/90 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 shadow-md"
             >
               Explore the Heritage
             </Link>
@@ -90,34 +102,34 @@ export const HeritageSection = () => {
           
           <div className="order-1 lg:order-2 grid grid-cols-2 gap-4 fade-in-scroll">
             <div className="space-y-4">
-              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64">
+              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64 indian-border p-0.5">
                 <img 
                   src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-63f72b3caf7b11edbd950a58a9feac02.jpg" 
                   alt="Palace architecture detail" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96">
+              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96 indian-border p-0.5">
                 <img 
                   src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-e07cf1c249fa11e9b0760242ac110004.jpg" 
                   alt="Palace interior" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
             </div>
             <div className="space-y-4 mt-8">
-              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96">
+              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-96 indian-border p-0.5">
                 <img 
                   src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-0216c704-ed02-469a-ba61-1f5f39519bfb.jpg" 
                   alt="Palace corridor" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64">
+              <div className="rounded-lg overflow-hidden shadow-md h-48 md:h-64 indian-border p-0.5">
                 <img 
                   src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-251b856caf7a11edb62d0a58a9feac02.jpg" 
                   alt="Palace artwork" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
             </div>

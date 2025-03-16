@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 45 30% 98%;
-    --foreground: 40 10% 15%;
+    --background: 39 30% 98%;
+    --foreground: 35 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 40 10% 15%;
+    --card-foreground: 35 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 40 10% 15%;
+    --popover-foreground: 35 10% 15%;
 
-    --primary: 43 77% 52%;
-    --primary-foreground: 40 15% 10%;
+    --primary: 36 77% 52%;
+    --primary-foreground: 35 15% 10%;
 
     --secondary: 357 73% 25%;
-    --secondary-foreground: 45 30% 98%;
+    --secondary-foreground: 39 30% 98%;
 
-    --muted: 40 10% 95%;
-    --muted-foreground: 40 5% 45%;
+    --muted: 35 10% 95%;
+    --muted-foreground: 35 5% 45%;
 
-    --accent: 40 30% 85%;
-    --accent-foreground: 40 10% 15%;
+    --accent: 35 30% 85%;
+    --accent-foreground: 35 10% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 10% 90%;
-    --input: 40 10% 90%;
-    --ring: 40 100% 50%;
+    --border: 35 10% 90%;
+    --input: 35 10% 90%;
+    --ring: 35 100% 50%;
 
     --radius: 0.5rem;
 
@@ -48,33 +48,33 @@
   }
 
   .dark {
-    --background: 40 10% 8%;
-    --foreground: 45 30% 98%;
+    --background: 35 10% 8%;
+    --foreground: 39 30% 98%;
 
-    --card: 40 10% 10%;
-    --card-foreground: 45 30% 98%;
+    --card: 35 10% 10%;
+    --card-foreground: 39 30% 98%;
 
-    --popover: 40 10% 10%;
-    --popover-foreground: 45 30% 98%;
+    --popover: 35 10% 10%;
+    --popover-foreground: 39 30% 98%;
 
-    --primary: 43 77% 52%;
-    --primary-foreground: 40 15% 8%;
+    --primary: 36 77% 52%;
+    --primary-foreground: 35 15% 8%;
 
     --secondary: 357 73% 30%;
-    --secondary-foreground: 45 30% 98%;
+    --secondary-foreground: 39 30% 98%;
 
-    --muted: 40 10% 15%;
-    --muted-foreground: 40 5% 75%;
+    --muted: 35 10% 15%;
+    --muted-foreground: 35 5% 75%;
 
-    --accent: 40 30% 20%;
-    --accent-foreground: 45 30% 98%;
+    --accent: 35 30% 20%;
+    --accent-foreground: 39 30% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 10% 20%;
-    --input: 40 10% 20%;
-    --ring: 43 77% 52%;
+    --border: 35 10% 20%;
+    --input: 35 10% 20%;
+    --ring: 36 77% 52%;
   }
 }
 
@@ -84,7 +84,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans bg-india-pattern;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -121,5 +121,17 @@
 
   .glass-panel {
     @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  
+  .indian-border {
+    @apply relative before:absolute before:inset-0 before:p-[3px] before:rounded-md before:bg-gradient-to-r before:from-heritage-gold before:via-heritage-saffron before:to-heritage-gold before:-z-10;
+  }
+  
+  .royal-card {
+    @apply bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-heritage-gold/20 indian-border;
+  }
+  
+  .royal-button {
+    @apply bg-gradient-to-r from-heritage-gold via-heritage-gold/90 to-heritage-gold text-heritage-navy font-medium px-6 py-3 rounded-md transition-all duration-300 hover:shadow-xl;
   }
 }

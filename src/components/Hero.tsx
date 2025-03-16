@@ -42,11 +42,22 @@ export const Hero = () => {
             filter: 'brightness(0.7)'
           }}
         />
+        {/* Indian pattern overlay */}
+        <div className="absolute inset-0 bg-paisley-pattern opacity-30"></div>
       </div>
       
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
         <div className="animate-fade-in max-w-5xl">
+          <div className="mb-6">
+            <div className="inline-block">
+              <svg width="120" height="40" viewBox="0 0 120 40" className="text-heritage-gold">
+                <path fill="currentColor" d="M40,0L80,40H0L40,0z" />
+                <path fill="currentColor" d="M120,0L80,40h40V0z" />
+                <path fill="currentColor" d="M0,0h40L0,40V0z" />
+              </svg>
+            </div>
+          </div>
           <h1 className="text-white font-serif mb-4 font-bold leading-tight">
             Experience the Royal Legacy <br />of Rajvant Palace Resort
           </h1>
@@ -58,9 +69,9 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link 
               to="/tour" 
-              className="bg-heritage-gold/95 hover:bg-heritage-gold text-heritage-navy px-8 py-3 rounded-md font-medium transition-all duration-300 hover:shadow-xl flex items-center"
+              className="royal-button flex items-center group"
             >
-              Virtual Tour <ArrowRight className="ml-2 h-4 w-4" />
+              Virtual Tour <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
               to="/book" 
