@@ -11,27 +11,26 @@ export const HeritageSection = () => {
   }, []);
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute -right-64 -top-64 w-[40rem] h-[40rem] rounded-full bg-heritage-gold/5 blur-3xl z-0"></div>
-      <div className="absolute -left-64 -bottom-64 w-[40rem] h-[40rem] rounded-full bg-heritage-burgundy/5 blur-3xl z-0"></div>
-      
-      {/* Indian pattern background */}
-      <div className="absolute inset-0 opacity-5 bg-india-pattern"></div>
+    <section className="py-24 indian-pattern relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-0 w-64 h-64 bg-heritage-gold/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-0 w-64 h-64 bg-heritage-burgundy/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-xl mx-auto text-center mb-16">
-          <div className="mb-4 flex justify-center">
-            <div className="inline-block">
-              <svg width="80" height="20" viewBox="0 0 80 20" className="text-heritage-gold">
-                <path fill="currentColor" d="M0,10 L20,0 L40,10 L60,0 L80,10 L80,15 L60,5 L40,15 L20,5 L0,15 Z" />
-              </svg>
-            </div>
+          <div className="mb-6 flex justify-center">
+            <div className="h-px w-24 bg-heritage-gold mx-2"></div>
+            <svg width="40" height="40" viewBox="0 0 100 100" className="text-heritage-gold mx-2">
+              <g fill="currentColor">
+                <path d="M50,10 A40,40 0 1,0 50,90 A40,40 0 1,0 50,10 Z M50,30 A20,20 0 1,1 50,70 A20,20 0 1,1 50,30 Z" />
+              </g>
+            </svg>
+            <div className="h-px w-24 bg-heritage-gold mx-2"></div>
           </div>
           <h6 className="text-heritage-burgundy font-medium mb-3 uppercase tracking-wider text-sm fade-in-scroll">Our Legacy</h6>
           <h2 className="text-heritage-navy font-serif mb-4 fade-in-scroll">Discover the Royal Heritage</h2>
           <p className="text-heritage-charcoal/80 fade-in-scroll">
-            The Rajvant Palace Resort is part of the 7-acre Vijayraj palace complex, showcasing a blend of European architectural styles
+            The Rajvant Palace showcases a blend of European architectural styles with distinctly Indian royal influences
           </p>
         </div>
         
@@ -40,25 +39,25 @@ export const HeritageSection = () => {
             {
               icon: Clock,
               title: "Historical Timeline",
-              description: "Built for Maharajah Vijay Singhji in 1915, the palace has a rich historical legacy",
+              description: "Built for Maharajah Vijay Singhji in 1915, the palace has a rich historical legacy spanning generations",
               link: "/history"
             },
             {
               icon: Crown,
               title: "Royal Museum",
-              description: "Explore rooms dedicated to trophies, stuffed animals, mirrors, portraits, textiles, and more",
+              description: "Explore rooms dedicated to royal artifacts, portraits, textiles, and precious heirlooms",
               link: "/museum"
             },
             {
               icon: FileText,
               title: "Architecture",
-              description: "Admire the Romanesque dome, classical columns, Greek capitals, Venetian doors, and Gothic arches",
+              description: "Admire the blend of Indian and European styles with intricate details and majestic spaces",
               link: "/architecture"
             },
             {
               icon: Book,
-              title: "Facilities",
-              description: "Enjoy 24-hour service, swimming pool, indoor & outdoor games, and luxury amenities",
+              title: "Royal Experience",
+              description: "Enjoy royal hospitality with traditional ceremonies, cuisine, and cultural performances",
               link: "/facilities"
             }
           ].map((item, index) => (
@@ -66,7 +65,7 @@ export const HeritageSection = () => {
               key={index} 
               className="royal-card fade-in-scroll"
             >
-              <div className="mb-4 bg-gradient-to-r from-heritage-gold/20 to-heritage-saffron/20 inline-flex p-3 rounded-lg text-heritage-burgundy">
+              <div className="mb-4 bg-gradient-to-r from-heritage-gold/10 to-heritage-saffron/10 inline-flex p-3 rounded-lg text-heritage-burgundy">
                 <item.icon className="h-6 w-6" />
               </div>
               <h4 className="font-medium text-heritage-navy mb-2">{item.title}</h4>
@@ -83,14 +82,14 @@ export const HeritageSection = () => {
         </div>
         
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1 space-y-6 fade-in-scroll">
+          <div className="order-2 lg:order-1 space-y-6 glass-panel p-8 rounded-lg fade-in-scroll">
             <div className="h-0.5 w-16 bg-heritage-gold mb-4"></div>
-            <h3 className="text-heritage-navy font-serif">A Marvel of European Architecture</h3>
+            <h3 className="text-heritage-navy font-serif">A Treasure of Indian Royal Heritage</h3>
             <p className="text-heritage-charcoal/80">
-              The palace resembles a typical European mansion, with its Romanesque dome, classical columns, Greek capitals, and Venetian doors, Gothic arches. The interiors are appointed in original period furniture.
+              The palace showcases the perfect blend of traditional Indian royal architecture and European influences. The intricate details of the façade and interiors are testament to the craftsmanship of the era.
             </p>
             <p className="text-heritage-charcoal/80">
-              A few rooms of the palace are set aside for a museum of trophies, stuffed animals, mirrors, portraits, textiles, glass and ceramics, offering visitors a glimpse into royal history.
+              Experience the royal lifestyle as the palace houses a museum of historical artifacts, including original furniture, artworks, and royal memorabilia that offer a glimpse into the opulent lifestyle of Indian royalty.
             </p>
             <Link 
               to="/heritage" 

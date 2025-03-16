@@ -31,7 +31,7 @@ export const Hero = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background image with parallax effect */}
+      {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <div 
           ref={heroRef}
@@ -39,31 +39,47 @@ export const Hero = () => {
           style={{ 
             backgroundImage: `url('https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-56acba50-5092-4a37-a4ce-68c5422db30d.jpg')`,
             backgroundPosition: 'center 30%',
-            filter: 'brightness(0.7)'
+            filter: 'brightness(0.8)'
           }}
         />
-        {/* Indian pattern overlay - reduced opacity */}
-        <div className="absolute inset-0 bg-paisley-pattern opacity-10"></div>
+        {/* Royal gold overlay pattern */}
+        <div className="absolute inset-0 mandala-pattern opacity-30"></div>
+      </div>
+      
+      {/* Decorative elements */}
+      <div className="absolute top-10 left-10 w-24 h-24 opacity-20">
+        <svg viewBox="0 0 100 100" className="w-full h-full text-heritage-gold">
+          <g fill="currentColor">
+            <path d="M50,0 L60,40 L100,50 L60,60 L50,100 L40,60 L0,50 L40,40 Z" />
+          </g>
+        </svg>
+      </div>
+      <div className="absolute bottom-10 right-10 w-24 h-24 opacity-20">
+        <svg viewBox="0 0 100 100" className="w-full h-full text-heritage-gold">
+          <g fill="currentColor">
+            <path d="M50,0 L60,40 L100,50 L60,60 L50,100 L40,60 L0,50 L40,40 Z" />
+          </g>
+        </svg>
       </div>
       
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
-        <div className="animate-fade-in max-w-5xl glass-panel p-8 rounded-xl">
-          <div className="mb-6">
-            <div className="inline-block">
-              <svg width="120" height="40" viewBox="0 0 120 40" className="text-heritage-gold">
-                <path fill="currentColor" d="M40,0L80,40H0L40,0z" />
-                <path fill="currentColor" d="M120,0L80,40h40V0z" />
-                <path fill="currentColor" d="M0,0h40L0,40V0z" />
-              </svg>
-            </div>
+        <div className="animate-fade-in glass-panel p-10 rounded-xl max-w-4xl mx-auto">
+          <div className="mb-8 flex justify-center">
+            <svg width="120" height="40" viewBox="0 0 120 40" className="text-heritage-gold">
+              <path fill="currentColor" d="M60,0 L70,10 L90,15 L70,20 L60,40 L50,20 L30,15 L50,10 Z" />
+              <path fill="currentColor" d="M20,10 L25,15 L35,18 L25,21 L20,30 L15,21 L5,18 L15,15 Z" />
+              <path fill="currentColor" d="M100,10 L105,15 L115,18 L105,21 L100,30 L95,21 L85,18 L95,15 Z" />
+            </svg>
           </div>
-          <h1 className="text-heritage-navy font-serif mb-4 font-bold leading-tight">
-            Experience the Royal Legacy <br />of Rajvant Palace Resort
+          
+          <h1 className="text-heritage-navy font-serif mb-6 font-bold leading-tight">
+            The Royal Legacy of <span className="text-heritage-burgundy">Rajvant Palace</span>
           </h1>
+          
           <p className="text-heritage-navy/90 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Step into a world of regal splendor and timeless elegance in this European-inspired 
-            mansion built for Maharajah Vijay Singhji in 1915
+            Step into a world of regal splendor and timeless elegance in this magnificent 
+            palace built for Maharajah Vijay Singhji in 1915
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -75,9 +91,9 @@ export const Hero = () => {
             </Link>
             <Link 
               to="/book" 
-              className="bg-heritage-navy/80 hover:bg-heritage-navy/90 text-white border border-white/40 px-8 py-3 rounded-md font-medium transition-all duration-300 hover:shadow-xl"
+              className="bg-heritage-navy/90 hover:bg-heritage-navy text-white border border-heritage-gold/30 px-8 py-3 rounded-md font-medium transition-all duration-300"
             >
-              Book Your Visit
+              Book Your Stay
             </Link>
           </div>
         </div>
