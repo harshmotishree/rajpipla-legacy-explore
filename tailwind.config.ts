@@ -63,23 +63,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				rekhta: {
-					cream: '#F2EFE9',
-					paper: '#F8F5F0',
-					brown: '#52483E',
-					darkbrown: '#3C3229',
-					gold: '#BB9A5A',
-					lightgold: '#DBCFB0',
-					red: '#731F17',
-					black: '#111111',
-					tan: '#E8E0D0',
-				},
-				cream: '#F8F5F0',
+				// Heritage theme colors
+				heritage: {
+					gold: '#D4AF37',
+					burgundy: '#800020',
+					navy: '#14213D',
+					cream: '#F5F5DC',
+					stone: '#E8DCCA',
+					charcoal: '#36454F',
+				}
 			},
 			fontFamily: {
-				serif: ['Noto Serif', 'Playfair Display', 'Georgia', 'serif'],
+				serif: ['Playfair Display', 'Georgia', 'serif'],
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				nastaliq: ['Noto Nastaliq Urdu', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -114,11 +110,6 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' },
-				},
-				'royal-shimmer': {
-					'0%': { backgroundPosition: '0% 50%' },
-					'50%': { backgroundPosition: '100% 50%' },
-					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
@@ -129,13 +120,10 @@ export default {
 				'fade-in-left': 'fade-in-left 0.8s ease-out',
 				'scale-in': 'scale-in 0.8s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'royal-shimmer': 'royal-shimmer 3s ease infinite',
 			},
 			backgroundImage: {
 				'marble-texture': "url('https://images.unsplash.com/photo-1589217157232-464b505b197d?q=80&w=2574')",
 				'parchment-texture': "url('https://images.unsplash.com/photo-1581431886281-93ae50c7c229?q=80&w=2670')",
-				'rekhta-pattern': "url(\"data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23BB9A5A' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M18 0h18v18H18V0zm0 18h18v18H18V18zM0 18h18v18H0V18zM0 0h18v18H0V0z'/%3E%3C/g%3E%3C/svg%3E\")",
-				'paper-texture': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2352483E' fill-opacity='0.04' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E\")",
 			}
 		}
 	},
