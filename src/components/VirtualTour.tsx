@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from "react";
-import { ArrowRight, Compass, MapPin, Eye } from "lucide-react";
+import { ArrowRight, Compass, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { setupScrollReveal } from "@/lib/animations";
 
@@ -40,11 +40,6 @@ export const VirtualTour = () => {
                 alt="Virtual tour of Rajvant Palace" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Link to="/tour" className="bg-white/20 backdrop-blur-md hover:bg-white/40 text-white p-6 rounded-full transition-all duration-300 hover:scale-110">
-                  <Eye className="h-8 w-8" />
-                </Link>
-              </div>
               
               {/* Tour hotspots */}
               <div className="absolute top-[30%] left-[25%] animate-pulse">
@@ -98,7 +93,7 @@ export const VirtualTour = () => {
             <div className="fade-in-scroll">
               <div className="flex items-start">
                 <div className="mr-4 bg-heritage-gold/20 p-3 rounded-lg text-heritage-gold">
-                  <Eye className="h-6 w-6" />
+                  <Compass className="h-6 w-6" />
                 </div>
                 <div>
                   <h4 className="text-heritage-navy font-medium mb-2">Guided Experience</h4>
