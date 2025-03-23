@@ -163,26 +163,22 @@ const TicketBooking = () => {
   };
 
   return (
-    <div className="min-h-screen relative">
-      <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: `url('https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-56acba50-5092-4a37-a4ce-68c5422db30d.jpg')`,
-            backgroundPosition: 'center 30%',
-            filter: 'brightness(0.5)',
-            zIndex: -1
-          }}
-        />
-      </div>
+    <div className="min-h-screen relative bg-heritage-cream/30">
+      <div 
+        className="absolute inset-0 opacity-5 bg-repeat"
+        style={{ 
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      />
       
       <Navbar />
       
       <main className="container mx-auto px-4 py-24 md:py-32 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-4">Book Your Palace Visit</h1>
-            <p className="text-white/90 max-w-2xl mx-auto">
+            <h6 className="text-heritage-burgundy font-medium mb-3 uppercase tracking-wider text-sm">Immersive Experience</h6>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-heritage-navy mb-4">Book Your Palace Visit</h1>
+            <p className="text-heritage-charcoal/80 max-w-2xl mx-auto">
               Experience the royal heritage of Rajvant Palace with our curated tour experiences. 
               Select your tickets, choose your date and time, and immerse yourself in centuries of history.
             </p>
