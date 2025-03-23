@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
@@ -164,20 +163,32 @@ const TicketBooking = () => {
   };
 
   return (
-    <div className="min-h-screen bg-heritage-cream/30">
+    <div className="min-h-screen relative">
+      <div className="absolute inset-0 z-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url('https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201411111128521825-56acba50-5092-4a37-a4ce-68c5422db30d.jpg')`,
+            backgroundPosition: 'center 30%',
+            filter: 'brightness(0.5)',
+            zIndex: -1
+          }}
+        />
+      </div>
+      
       <Navbar />
       
-      <main className="container mx-auto px-4 py-24 md:py-32">
+      <main className="container mx-auto px-4 py-24 md:py-32 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-heritage-navy mb-4">Book Your Palace Visit</h1>
-            <p className="text-heritage-charcoal/80 max-w-2xl mx-auto">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-4">Book Your Palace Visit</h1>
+            <p className="text-white/90 max-w-2xl mx-auto">
               Experience the royal heritage of Rajvant Palace with our curated tour experiences. 
               Select your tickets, choose your date and time, and immerse yourself in centuries of history.
             </p>
           </div>
           
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-heritage-gold/20">
+          <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-heritage-gold/20">
             <div className="p-1">
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-heritage-cream/50">
@@ -516,7 +527,7 @@ const TicketBooking = () => {
             </div>
           </div>
           
-          <div className="mt-8 p-5 border border-heritage-gold/20 rounded-lg bg-white shadow-sm">
+          <div className="mt-8 p-5 border border-heritage-gold/20 rounded-lg bg-white/95 backdrop-blur-sm shadow-sm">
             <h3 className="text-lg font-medium text-heritage-navy mb-3">Important Information</h3>
             <ul className="space-y-2 text-heritage-charcoal/80">
               <li className="flex items-start">
