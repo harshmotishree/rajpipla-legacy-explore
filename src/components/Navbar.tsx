@@ -1,12 +1,16 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  // Determine if we're on a page that should have dark navbar initially
+  const shouldBeDarkInitially = location.pathname === "/book";
   
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +29,7 @@ export const Navbar = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
-        isScrolled 
+        isScrolled || shouldBeDarkInitially
           ? "bg-white/90 backdrop-blur-md shadow-md py-3" 
           : "bg-transparent py-6"
       )}
@@ -34,7 +38,7 @@ export const Navbar = () => {
         <Link to="/" className="flex items-center">
           <h1 className={cn(
             "font-serif text-2xl md:text-3xl font-bold text-heritage-navy transition-all duration-300",
-            isScrolled ? "text-heritage-navy" : "text-white"
+            isScrolled || shouldBeDarkInitially ? "text-heritage-navy" : "text-white"
           )}>
             Rajvant Palace
           </h1>
@@ -47,7 +51,7 @@ export const Navbar = () => {
               to={`/${item.toLowerCase()}`}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-heritage-gold link-underline",
-                isScrolled ? "text-heritage-navy" : "text-white"
+                isScrolled || shouldBeDarkInitially ? "text-heritage-navy" : "text-white"
               )}
             >
               {item}
@@ -67,9 +71,9 @@ export const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
-            <X className={isScrolled ? "text-heritage-navy" : "text-white"} />
+            <X className={isScrolled || shouldBeDarkInitially ? "text-heritage-navy" : "text-white"} />
           ) : (
-            <Menu className={isScrolled ? "text-heritage-navy" : "text-white"} />
+            <Menu className={isScrolled || shouldBeDarkInitially ? "text-heritage-navy" : "text-white"} />
           )}
         </button>
       </div>
