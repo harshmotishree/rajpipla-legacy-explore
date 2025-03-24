@@ -39,6 +39,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
 import TicketCard from "@/components/TicketCard";
+import PaymentOptions from "@/components/PaymentOptions";
 
 const ticketTypes = [
   {
@@ -87,9 +88,25 @@ const bookingSchema = z.object({
   lastName: z.string().min(2, "Last name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
   phone: z.string().min(10, "Please enter a valid phone number"),
-  cardNumber: z.string().min(16, "Please enter a valid card number"),
-  cardExpiry: z.string().min(5, "Please enter a valid expiry date (MM/YY)"),
-  cardCVC: z.string().min(3, "Please enter a valid CVC")
+  
+  cardNumber: z.string().optional(),
+  cardExpiry: z.string().optional(),
+  cardCVC: z.string().optional(),
+  upiId: z.string().optional(),
+  bankName: z.string().optional(),
+  emiOption: z.string().optional(),
+  walletType: z.string().optional(),
+}).refine((data) => {
+  return (
+    (data.cardNumber && data.cardExpiry && data.cardCVC) || 
+    data.upiId || 
+    data.bankName || 
+    data.emiOption || 
+    data.walletType
+  );
+}, {
+  message: "Please select a payment method",
+  path: ["cardNumber"],
 });
 
 type BookingFormValues = z.infer<typeof bookingSchema>;
@@ -111,7 +128,11 @@ const TicketBooking = () => {
       phone: "",
       cardNumber: "",
       cardExpiry: "",
-      cardCVC: ""
+      cardCVC: "",
+      upiId: "",
+      bankName: "",
+      emiOption: "",
+      walletType: "",
     }
   });
 
@@ -163,7 +184,6 @@ const TicketBooking = () => {
   const onSubmit = (data: BookingFormValues) => {
     setIsProcessing(true);
     
-    // Simulate API call
     setTimeout(() => {
       setIsProcessing(false);
       
@@ -419,8 +439,6 @@ const TicketBooking = () => {
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                       <div className="space-y-4">
-                        <h3 className="text-lg font-medium text-heritage-navy">Payment Details</h3>
-                        
                         <div className="p-4 bg-heritage-cream/50 rounded-md mb-6">
                           <div className="flex justify-between mb-2">
                             <span className="text-heritage-charcoal">Total Tickets:</span>
@@ -446,58 +464,7 @@ const TicketBooking = () => {
                           </div>
                         </div>
                         
-                        <div className="grid grid-cols-1 gap-6">
-                          <FormField
-                            control={form.control}
-                            name="cardNumber"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Card Number</FormLabel>
-                                <FormControl>
-                                  <div className="relative">
-                                    <Input 
-                                      {...field} 
-                                      placeholder="1234 5678 9012 3456"
-                                      className="pl-10"
-                                    />
-                                    <CreditCard className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-heritage-charcoal/60" />
-                                  </div>
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                          
-                          <div className="grid grid-cols-2 gap-4">
-                            <FormField
-                              control={form.control}
-                              name="cardExpiry"
-                              render={({ field }) => (
-                                <FormItem>
-                                  <FormLabel>Expiry Date</FormLabel>
-                                  <FormControl>
-                                    <Input {...field} placeholder="MM/YY" />
-                                  </FormControl>
-                                  <FormMessage />
-                                </FormItem>
-                              )}
-                            />
-                            
-                            <FormField
-                              control={form.control}
-                              name="cardCVC"
-                              render={({ field }) => (
-                                <FormItem>
-                                  <FormLabel>CVC</FormLabel>
-                                  <FormControl>
-                                    <Input {...field} placeholder="123" />
-                                  </FormControl>
-                                  <FormMessage />
-                                </FormItem>
-                              )}
-                            />
-                          </div>
-                        </div>
+                        <PaymentOptions form={form} />
                       </div>
                       
                       <div className="flex justify-between space-x-4">
