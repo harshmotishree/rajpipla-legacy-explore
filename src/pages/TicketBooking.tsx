@@ -141,6 +141,25 @@ const TicketBooking = () => {
     }
   };
 
+  const validateDetailsAndProceed = async () => {
+    const fieldsToValidate = ["date", "timeSlot", "firstName", "lastName", "email", "phone"];
+    
+    const result = await form.trigger(fieldsToValidate);
+    
+    if (result) {
+      setActiveTab("payment");
+    } else {
+      toast.error("Please fill all required fields", {
+        description: "All fields must be completed before proceeding to payment."
+      });
+      
+      const firstErrorField = fieldsToValidate.find(field => form.formState.errors[field as keyof BookingFormValues]);
+      if (firstErrorField) {
+        form.setFocus(firstErrorField as keyof BookingFormValues);
+      }
+    }
+  };
+
   const onSubmit = (data: BookingFormValues) => {
     setIsProcessing(true);
     
@@ -152,12 +171,10 @@ const TicketBooking = () => {
         description: "Your tickets have been booked. Check your email for details.",
       });
       
-      // Reset form and state
       form.reset();
       setSelectedTickets({});
       setActiveTab("select");
       
-      // Redirect to home after a delay
       setTimeout(() => navigate("/"), 3000);
     }, 2000);
   };
@@ -200,7 +217,7 @@ const TicketBooking = () => {
                   </TabsTrigger>
                   <TabsTrigger 
                     value="payment" 
-                    disabled={!form.formState.isValid || activeTab !== "details"} 
+                    disabled={activeTab !== "details"} 
                     className="data-[state=active]:bg-white"
                   >
                     3. Payment
@@ -388,12 +405,7 @@ const TicketBooking = () => {
                         </Button>
                         <Button
                           type="button"
-                          onClick={() => {
-                            const result = form.trigger(["date", "timeSlot", "firstName", "lastName", "email", "phone"]);
-                            if (result) {
-                              setActiveTab("payment");
-                            }
-                          }}
+                          onClick={validateDetailsAndProceed}
                           className="bg-heritage-gold hover:bg-heritage-gold/90 text-heritage-navy"
                         >
                           Continue to Payment
