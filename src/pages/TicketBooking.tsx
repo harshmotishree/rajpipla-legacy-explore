@@ -142,7 +142,7 @@ const TicketBooking = () => {
   };
 
   const validateDetailsAndProceed = async () => {
-    const fieldsToValidate = ["date", "timeSlot", "firstName", "lastName", "email", "phone"];
+    const fieldsToValidate = ["date", "timeSlot", "firstName", "lastName", "email", "phone"] as const;
     
     const result = await form.trigger(fieldsToValidate);
     
@@ -498,14 +498,6 @@ const TicketBooking = () => {
                             />
                           </div>
                         </div>
-                      </div>
-                      
-                      <div className="relative px-4 py-3 border border-heritage-gold/30 rounded-md bg-heritage-gold/5 text-heritage-charcoal/80 text-sm flex items-start space-x-3">
-                        <Info className="h-5 w-5 text-heritage-gold flex-shrink-0 mt-0.5" />
-                        <p>
-                          This is a demonstration payment form. No actual payment will be processed.
-                          Your information is not stored or transmitted to any payment processor.
-                        </p>
                       </div>
                       
                       <div className="flex justify-between space-x-4">
