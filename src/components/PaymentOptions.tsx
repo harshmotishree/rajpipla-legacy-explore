@@ -18,7 +18,12 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({ form }) => {
   const [activeMethod, setActiveMethod] = React.useState<string>("card");
 
   const handlePaymentMethodChange = (method: string) => {
-    setActiveMethod(method);
+    // If the current active method is the same as the clicked one, close it
+    if (activeMethod === method) {
+      setActiveMethod("");
+    } else {
+      setActiveMethod(method);
+    }
     
     // Clear validation errors for the previous payment method
     if (method !== "card") {
@@ -252,8 +257,20 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({ form }) => {
             <Wallet className="h-5 w-5 text-blue-600" />
             <span className="font-medium">Wallet</span>
             <div className="flex space-x-2 items-center ml-2">
-              <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center text-white text-xs font-bold">P</div>
-              <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">M</div>
+              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-white text-xs font-bold overflow-hidden">
+                <img 
+                  src="https://www.logo.wine/a/logo/Google_Pay/Google_Pay-Logo.wine.svg" 
+                  alt="Google Pay" 
+                  className="h-5 w-5 object-contain"
+                />
+              </div>
+              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-white text-xs font-bold overflow-hidden">
+                <img 
+                  src="https://www.logo.wine/a/logo/PhonePe/PhonePe-Logo.wine.svg" 
+                  alt="PhonePe" 
+                  className="h-5 w-5 object-contain"
+                />
+              </div>
             </div>
           </div>
           <span className="text-heritage-charcoal">{activeMethod === "wallet" ? "▲" : "▼"}</span>
@@ -275,6 +292,7 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({ form }) => {
                     <option value="">Select wallet</option>
                     <option value="paytm">Paytm</option>
                     <option value="phonepe">PhonePe</option>
+                    <option value="googlepay">Google Pay</option>
                     <option value="mobikwik">MobiKwik</option>
                     <option value="amazonpay">Amazon Pay</option>
                   </select>
