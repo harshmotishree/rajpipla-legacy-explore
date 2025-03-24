@@ -1,6 +1,6 @@
 
 import React from "react";
-import { CreditCard, Wallet, IndianRupee, Bank } from "lucide-react";
+import { CreditCard, Wallet, IndianRupee, Building } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -25,9 +25,11 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({ form }) => {
       form.clearErrors("cardNumber");
       form.clearErrors("cardExpiry");
       form.clearErrors("cardCVC");
-    } else if (method !== "upi") {
+    } 
+    if (method !== "upi") {
       form.clearErrors("upiId");
-    } else if (method !== "netbanking") {
+    } 
+    if (method !== "netbanking") {
       form.clearErrors("bankName");
     }
   };
@@ -47,7 +49,7 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({ form }) => {
             <IndianRupee className="h-5 w-5 text-blue-600" />
             <span className="font-medium">UPI</span>
             <div className="flex space-x-2 items-center ml-2">
-              <img src="public/lovable-uploads/14120503-557c-47c7-bbdf-ead2ef78efca.png" alt="UPI options" className="h-6" />
+              <img src="/lovable-uploads/14120503-557c-47c7-bbdf-ead2ef78efca.png" alt="UPI options" className="h-6" />
             </div>
           </div>
           <span className="text-heritage-charcoal">{activeMethod === "upi" ? "▲" : "▼"}</span>
@@ -155,7 +157,7 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({ form }) => {
       >
         <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-white hover:bg-heritage-cream/20">
           <div className="flex items-center space-x-3">
-            <Bank className="h-5 w-5 text-blue-600" />
+            <Building className="h-5 w-5 text-blue-600" />
             <span className="font-medium">Netbanking</span>
             <div className="flex space-x-2 items-center ml-2">
               <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">SBI</div>
